@@ -1,6 +1,8 @@
 
 public class Produto {
+	@Visible
 	private int id;
+	@Visible
 	private String nome;
 	private double preco;
 	

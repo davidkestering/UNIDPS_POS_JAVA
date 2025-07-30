@@ -13,9 +13,15 @@ public class ClassExplorer {
 		}
 		System.out.println("----> Extraindo dados do objeto");
 		for (Field f: o.getClass().getDeclaredFields()) {
-			f.setAccessible(true);
-			System.out.println(f.getName() + ":" +f.get(o));
-			f.setAccessible(false);
+			//f.setAccessible(true);
+			if (f.isAnnotationPresent(Visible.class)) {
+				f.setAccessible(true);
+				System.out.println("Atributo visível: "+ f.getName() + ":" +f.get(o));
+				f.setAccessible(false);
+			}else {
+				System.out.println("Atributo não visível: "+ f.getName());
+			}
+			
 		}
 		System.out.println("----> Extraindo por execucao de método");
 		for (Method m: o.getClass().getDeclaredMethods()) {
