@@ -5,6 +5,13 @@ public class Produto {
 	private String nome;
 	private double preco;
 	
+	public Produto(int id, String nome, double preco) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.preco = preco;
+	}
+	
 	public int getId() {
 		return id;
 	}

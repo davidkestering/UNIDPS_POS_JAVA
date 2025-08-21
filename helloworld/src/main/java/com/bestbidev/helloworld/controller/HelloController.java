@@ -15,7 +15,7 @@ public class HelloController {
 		return "Hello World";
 	}
 	
-	@GetMapping("/produtos")
+	/*@GetMapping("/produtos")
 	public Produto getProduto() {
 		Produto p = new Produto();
 		p.setId(12345);
@@ -30,6 +30,6 @@ public class HelloController {
 		System.out.println("Produto recebido");
 		System.out.println(p.getId()+"/"+p.getNome()+"/"+p.getPreco());
 		return "ok";
-	}
+	}*/
 
 }
