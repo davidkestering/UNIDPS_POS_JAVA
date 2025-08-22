@@ -2,8 +2,6 @@ package com.bestbidev.events.model;
 
 import java.time.LocalDateTime;
 
-import com.bestbidev.events.controller.SubscriptionID;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -47,6 +45,13 @@ public class Subscription {
 	public void setUniqueID(String uniqueID) {
 		UniqueID = uniqueID;
 	}
+	@Override
+	public String toString() {
+		return "Subscription [id=" + id + ", createdAt=" + createdAt + ", level=" + level + ", UniqueID=" + UniqueID
+				+ "]";
+	}
+	
+	
 	
 	
 }

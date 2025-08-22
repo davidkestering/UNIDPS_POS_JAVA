@@ -37,6 +37,10 @@ public class Conference {
 	public void setAddress(String address) {
 		this.address = address;
 	}
+	@Override
+	public String toString() {
+		return "Conference [id=" + id + ", name=" + name + ", address=" + address + "]";
+	}
 	
 	
 	

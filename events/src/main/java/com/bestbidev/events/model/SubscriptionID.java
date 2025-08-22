@@ -1,7 +1,4 @@
-package com.bestbidev.events.controller;
-
-import com.bestbidev.events.model.Session;
-import com.bestbidev.events.model.User;
+package com.bestbidev.events.model;
 
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.JoinColumn;
@@ -11,7 +8,7 @@ import jakarta.persistence.ManyToOne;
 public class SubscriptionID {
 	
 	@ManyToOne
-	@JoinColumn(name = "subscribed_used_id")
+	@JoinColumn(name = "subscribed_user_id")
 	private User user;
 	
 	@ManyToOne
@@ -33,6 +30,13 @@ public class SubscriptionID {
 	public void setSession(Session session) {
 		this.session = session;
 	}
+
+	@Override
+	public String toString() {
+		return "SubscriptionID [user=" + user + ", session=" + session + "]";
+	}
+	
+	
 	
 	
 }
